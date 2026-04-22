@@ -2,16 +2,13 @@ node {
 
     stage('Build') {
         sh '''
-        python3 -m venv venv
-        . venv/bin/activate
-        pip install --upgrade pip
-        pip install flask pytest
+        pip3 install --upgrade pip
+        pip3 install flask pytest
         '''
     }
 
     stage('Test') {
         sh '''
-        . venv/bin/activate
         pytest || echo "No tests found"
         '''
     }
