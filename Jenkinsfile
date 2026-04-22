@@ -5,8 +5,8 @@ node {
         python3 -m venv venv
         . venv/bin/activate
         python -m ensurepip --upgrade
-        pip install --upgrade pip
-        pip install flask pytest
+        sudo pip install --upgrade pip
+        sudo pip install flask pytest
         '''
     }
 
